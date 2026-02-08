@@ -1,0 +1,136 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+/* main container */
+.container {
+  width: min(900px, 92%);
+  margin: 50px auto;
+}
+
+/* navbar */
+nav {
+  height: 60px;
+  background: #0b2d5c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  border-radius: 6px 6px 0 0;
+}
+
+nav div {
+  color: #fff;
+  font-weight: 600;
+  /* letter-spacing: 0.5px; */
+}
+
+.display-All-quote {
+  background: #f6c700;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+
+main {
+  background: #fff;
+  padding: 28px 22px;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.Outer-div-display-quote-auther {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.inner-div-display-quote-auther {
+  background: #f2f2f2;
+  padding: 28px 18px;
+  border-radius: 14px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.display-quote {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.display-auther {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.generate-quote {
+  width: 100%;
+  margin: 18px 0 22px;
+  padding: 12px;
+  background: #f6c700;
+  border: 1px solid #d6aa00;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfd5dd;
+  border-radius: 6px;
+  /* outline: none; */
+}
+
+input:focus {
+  /* border-color: #0b2d5c; */
+}
+
+form button {
+  align-self: flex-end;
+  /* position: relative;
+  left: 593px; */
+  width: 260px;
+  padding: 10px 12px;
+  background: #f6c700;
+  border: 1px solid #d6aa00;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
