@@ -1,4 +1,4 @@
-const quote = [
+const defaultQuote = [
   {
     auther: "steve jobs",
     quote: "Stay hungry stay foolish",
@@ -24,6 +24,18 @@ const quote = [
     auther: "Theodore Roosevelt",
   },
 ];
+
+let storedData = localStorage.getItem("localquotes");
+let quote;
+
+//checking if not stored in local storage
+if (storedData == null) {
+  quote = defaultQuote;
+  localStorage.setItem("localquote", JSON.stringify(quote));
+} else //if it is already stored
+{
+  quote = JSON.parse(storedData);
+}
 
 let displayAllquote = document.querySelector(".display-All-quote");
 let displayQuote = document.querySelector(".display-quote");
@@ -57,16 +69,23 @@ form.addEventListener("submit", function (event) {
   if (inputAuther.value === "") {
     alert("Quote and Auther name Cannot be empty");
   } else if (inputQuote.value === "") {
-    alert("Quote cannot be emplt");
+    alert("Quote cannot be empty");
   } else {
     const newQuote = {
       auther: inputAuther.value,
       quote: inputQuote.value,
     };
-    quote.push(newQuote);
+    console.log(quote.push(newQuote));
+    //saving added quote to local storage
+    console.log(localStorage.setItem("localquotes", JSON.stringify(quote)));
+
     inputAuther.value = "";
     inputQuote.value = "";
     console.log(quote);
+
+    // console.log("form:", form);
+    // console.log("inputAuther:", inputAuther);
+    // console.log("inputQuote:", inputQuote);
   }
 });
 
