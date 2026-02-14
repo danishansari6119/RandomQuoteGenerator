@@ -81,6 +81,7 @@ form.addEventListener("submit", function (event) {
 
     inputAuther.value = "";
     inputQuote.value = "";
+    alert("Quote Added Successfuly");
     console.log(quote);
 
     // console.log("form:", form);
